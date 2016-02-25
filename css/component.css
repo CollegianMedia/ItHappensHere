@@ -401,6 +401,9 @@
 		width: 50%;
 		max-width: none;
 	}
+	.page--static {
+		margin: 0;
+	}
 }
 
 /* Media query for even smaller screens */
@@ -421,5 +424,8 @@
 	.grid__item {
 		width: 100%;
 		max-width: none;
+	}
+	.page--static {
+		margin: 0;
 	}
 }
