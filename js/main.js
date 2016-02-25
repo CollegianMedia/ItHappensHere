@@ -7,6 +7,9 @@
  * 
  * Copyright 2016, Codrops
  * http://www.codrops.com
+ * 
+ * Modified by George Walker for the It Happens Here photo essay.
+ * 
  */
 ;(function(window) {
 
@@ -88,6 +91,8 @@
 		titleEl = mainContainer.querySelector('.title-wrap > .title--main'),
 		// main subtitle element
 		subtitleEl = mainContainer.querySelector('.title-wrap > .title--sub'),
+		// warning element
+		warningEl = mainContainer.querySelector('.title-wrap > .title--warning'),
 		// the fullscreen element/division that will slide up, giving the illusion the items will fall down
 		pagemover = mainContainer.querySelector('.page--mover'),
 		// the loading element shown while the images are loaded
@@ -203,9 +208,6 @@
 		};
 		window.addEventListener('scroll', scrollfn);
 
-		// todo: show/load more grid items
-		loadMoreCtrl.addEventListener('click', loadNextItems);
-
 		// window resize: recalculate window sizes and reposition the 6 grid items behind the phone (if the grid view is not yet shown)
 		window.addEventListener('resize', debounce(function(ev) {
 			// reset window sizes
@@ -255,6 +257,14 @@
 			points: [{"x":0,"y":0,"cp":[{"x":0.7,"y":0}]},{"x":1,"y":1,"cp":[{"x":0.3,"y":1}]}],
 			duration: 600,
 			delay: 100
+		});
+		
+		// warning animation
+		dynamics.animate(warningEl, { translateY: -winsize.height/2, opacity: 0 }, {
+			type: dynamics.bezier,
+			points: [{"x":0,"y":0,"cp":[{"x":0.7,"y":0}]},{"x":1,"y":1,"cp":[{"x":0.3,"y":1}]}],
+			duration: 600,
+			delay: 200
 		});
 
 		// device animation

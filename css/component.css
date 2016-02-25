@@ -26,7 +26,7 @@
 	width: 100%;
 	height: 100vh;
 	pointer-events: none;
-	background: #2d323c;
+	background: #e9ecef;
 }
 
 /* the title of the initial view */
@@ -48,9 +48,9 @@
 }
 
 .title--main {
-	font-size: 5.75em;
+	font-size: 2.75em;
 	margin: 0 auto;
-	color: #df2d70;
+	color: #262262;
 }
 
 .title--sub {
@@ -58,7 +58,7 @@
 	font-weight: 700;
 	display: block;
 	margin: 0;
-	color: #565f73;
+	color: #262262;
 }
 
 @media screen and (min-width: 100em) {
@@ -92,8 +92,7 @@
 .page__title-main {
 	font-size: 2em;
 	margin: 0 auto;
-	padding: 3em 0 0;
-	color: #03a9f4;
+	color: #262262;
 }
 
 .page__title-sub {
@@ -115,11 +114,11 @@
 
 .device__screen {
 	position: absolute;
-	top: 25.5%;
+	top: 19.5%;
 	left: 8.5%;
 	width: 83%;
 	height: 100%;
-	background: url(../img/screen.jpg) no-repeat 50% 0%;
+	background: url(../img/ItHappensHere.png) no-repeat 50% 0%;
 	background-size: 100%;
 }
 
@@ -141,7 +140,7 @@
 	margin: 0 0 0 -1.5em;
 	-webkit-animation: pointDown 0.6s 0.6s ease-in infinite alternate forwards;
 	animation: pointDown 0.6s 0.6s ease-in infinite alternate forwards;
-	fill: #fff;
+	fill: #262262;
 }
 
 @-webkit-keyframes pointDown {
@@ -298,7 +297,7 @@
 
 .grid__link {
 	display: block;
-	padding: 13px 13px 0 13px;
+	padding: 13px;
 	background: #fff;
 }
 
@@ -371,6 +370,10 @@
 
 .view--grid .page--static {
 	pointer-events: auto;
+}
+
+.media-item__img {
+	width: 200px;
 }
 
 /* Media query for smaller screens */

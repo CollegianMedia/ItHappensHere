@@ -1,3 +1,9 @@
+# It Happens Here
+
+A photo series for the Kansas State Collegian.
+
+## Forked From:
+
 # Polaroid Stack to Grid Intro Animation
 
 Demos for the [tutorial](http://tympanus.net/codrops/?p=26096) on how to create an intro animation where a decorative Polaroid stacks becomes a grid similar to the effect seen on the [takeit](http://www.takeitapp.co/en) website.
