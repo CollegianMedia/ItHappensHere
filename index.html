@@ -82,42 +82,42 @@
 					</li>
 					<li class="grid__item">
 						<a class="grid__link fancybox" rel="a" href="img/photos/7.jpg">
-							<img class="grid__img" src="img/photos/7.jpg" />
+							<img class="grid__img lazy" data-original="img/photos/7.jpg" />
 						</a>
 					</li>
 					<li class="grid__item">
 						<a class="grid__link fancybox" rel="a" href="img/photos/8.jpg">
-							<img class="grid__img" src="img/photos/8.jpg" />
+							<img class="grid__img lazy" data-original="img/photos/8.jpg" />
 						</a>
 					</li>
 					<li class="grid__item">
 						<a class="grid__link fancybox" rel="a" href="img/photos/9.jpg">
-							<img class="grid__img" src="img/photos/9.jpg" />
+							<img class="grid__img lazy" data-original="img/photos/9.jpg" />
 						</a>
 					</li>
 					<li class="grid__item">
 						<a class="grid__link fancybox" rel="a" href="img/photos/10.jpg">
-							<img class="grid__img" src="img/photos/10.jpg" />
+							<img class="grid__img lazy" data-original="img/photos/10.jpg" />
 						</a>
 					</li>
 					<li class="grid__item">
 						<a class="grid__link fancybox" rel="a" href="img/photos/11.jpg">
-							<img class="grid__img" src="img/photos/11.jpg" />
+							<img class="grid__img lazy" data-original="img/photos/11.jpg" />
 						</a>
 					</li>
 					<li class="grid__item">
 						<a class="grid__link fancybox" rel="a" href="img/photos/12.jpg">
-							<img class="grid__img" src="img/photos/12.jpg" />
+							<img class="grid__img lazy" data-original="img/photos/12.jpg" />
 						</a>
 					</li>
 					<li class="grid__item">
 						<a class="grid__link fancybox" rel="a" href="img/photos/13.jpg">
-							<img class="grid__img" src="img/photos/13.jpg" />
+							<img class="grid__img lazy" data-original="img/photos/13.jpg" />
 						</a>
 					</li>
 					<li class="grid__item">
 						<a class="grid__link fancybox" rel="a" href="img/photos/14.jpg">
-							<img class="grid__img" src="img/photos/14.jpg" />
+							<img class="grid__img lazy" data-original="img/photos/14.jpg" />
 						</a>
 					</li>
 				</ul>
@@ -159,6 +159,7 @@
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.15/jquery.touchSwipe.min.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-buttons.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.min.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
 				$(".fancybox").fancybox({width: "100%",
@@ -186,6 +187,12 @@
         afterLoad : function() {
         }
     });
+			});
+			
+			$(function() {
+				$("img.lazy").lazyload({
+					effect : "fadeIn"
+				});
 			});
 		</script>
 	</body>
