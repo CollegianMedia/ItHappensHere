@@ -154,11 +154,36 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.0/imagesloaded.pkgd.min.js"></script>
 		<script src="js/main.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.15/jquery.touchSwipe.min.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-buttons.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
-				$(".fancybox").fancybox();
+				$(".fancybox").fancybox({width: "100%",
+        margin: [20, 20, 20, 20],
+        padding: [0, 0, 0, 0],
+        openEffect  : 'none',
+        closeEffect : 'none',
+        prevEffect : 'fade',
+        nextEffect : 'fade',
+        closeBtn  : true,
+        arrows: false,
+        afterShow: function() {
+            $('.fancybox-wrap').swipe({
+                swipe : function(event, direction) {
+                    if (direction === 'left' || direction === 'up') {
+                        $.fancybox.prev( direction );
+                    } else {
+                        $.fancybox.next( direction );
+                    }
+                }
+            });
+
+        },
+
+        afterLoad : function() {
+        }
+    });
 			});
 		</script>
 	</body>
