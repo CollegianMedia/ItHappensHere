@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 	<head>
+		<script type='text/javascript'>var _sf_startpt=(new Date()).getTime()</script>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -220,6 +221,30 @@
 			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 			ga('create', 'UA-34104975-15', 'auto');
 			ga('send', 'pageview');
+		</script>
+		<script type='text/javascript'>
+			var _sf_async_config = _sf_async_config || {};
+			_sf_async_config.uid = 61220;
+			_sf_async_config.domain = 'kstatecollegian.com';
+			_sf_async_config.useCanonical = true;
+			_sf_async_config.sections = 'photo';
+			_sf_async_config.authors = 'George Walker';
+			(function() {
+				function loadChartbeat() {
+					window._sf_endpt = (new Date()).getTime();
+					var e = document.createElement('script');
+					e.setAttribute('language', 'javascript');
+					e.setAttribute('type', 'text/javascript');
+					e.setAttribute('src', '//static.chartbeat.com/js/chartbeat.js');
+					document.body.appendChild(e);
+				}
+				var oldonload = window.onload;
+				window.onload = (typeof window.onload != 'function') ?
+					loadChartbeat : function() {
+						oldonload();
+						loadChartbeat();
+					};
+			})();
 		</script>
 	</body>
 </html>
