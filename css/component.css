@@ -27,6 +27,8 @@
 	height: 100vh;
 	pointer-events: none;
 	background: #e9ecef;
+	display: flex;
+    align-items: center;
 }
 
 /* the title of the initial view */
