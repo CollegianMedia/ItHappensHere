@@ -329,33 +329,6 @@
 		});
 	}
 
-	/**
-	 * dummy fn: simulate the load of the next grid items
-	 */
-	function loadNextItems() {
-		// loadMoreCtrl button gets class button--loading. This will transform the button into a loading/animated button
-		classie.add(loadMoreCtrl, 'button--loading');
-		// the timeout serves to simulate the time that we would probably wait for the response
-		setTimeout(function() {
-			// hide button
-			classie.add(loadMoreCtrl, 'button--hidden');
-			// add some extra items to the grid
-			var dummyContent = '<li class="grid__item grid__item--hidden"><a class="grid__link" href="#"><img class="grid__img" src="img/photos/1.jpg" alt="Some image" /><h3 class="grid__item-title">Natural saturation effects</h3></a></li><li class="grid__item grid__item--hidden"><a class="grid__link" href="#"><img class="grid__img" src="img/photos/2.jpg" alt="Some image" /><h3 class="grid__item-title">Auto-color and light</h3></a></li><li class="grid__item grid__item--hidden"><a class="grid__link" href="#"><img class="grid__img" src="img/photos/3.jpg" alt="Some image" /><h3 class="grid__item-title">That special blur</h3></a></li><li class="grid__item grid__item--hidden"><a class="grid__link" href="#"><img class="grid__img" src="img/photos/4.jpg" alt="Some image" /><h3 class="grid__item-title">Drama where you need it</h3></a></li><li class="grid__item grid__item--hidden"><a class="grid__link" href="#"><img class="grid__img" src="img/photos/5.jpg" alt="Some image" /><h3 class="grid__item-title">Realistic depth</h3></a></li><li class="grid__item grid__item--hidden"><a class="grid__link" href="#"><img class="grid__img" src="img/photos/6.jpg" alt="Some image" /><h3 class="grid__item-title">The common, but special</h3></a></li>';
-			gridEl.innerHTML += dummyContent;
-			[].slice.call(gridEl.querySelectorAll('.grid__item--hidden')).forEach(function(item) {
-				gridItems.push(item);
-				dynamics.css(item, { scale: 0, opacity: 0 });
-				classie.remove(item, 'grid__item--hidden');
-				dynamics.animate(item, { scale: 1, opacity: 1 }, {
-					type: dynamics.bezier,
-					points: [{"x":0,"y":0,"cp":[{"x":0.2,"y":1}]},{"x":1,"y":1,"cp":[{"x":0.3,"y":1}]}],
-					duration: 800,
-					delay: randomIntFromInterval(0,300)
-				});
-			});
-		}, 1500);
-	}
-
 	// force the scrolling to the top of the page (from http://stackoverflow.com/a/23312671)
 	window.onbeforeunload = function(){ 	
 		window.scrollTo(0,0);

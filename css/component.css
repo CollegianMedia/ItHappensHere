@@ -110,7 +110,6 @@
 	width: 45vh;
 	height: 45vh;
 	margin: 0 0 0 -22.5vh;
-	background: url(../img/device.svg) no-repeat 50% 0%;
 	background-size: 100%;
 }
 
@@ -359,6 +358,11 @@
 .view--loaded .device,
 .view--loaded .button--view {
 	opacity: 1;
+}
+
+.view,
+.view--loaded {
+	overflow: hidden;
 }
 
 .view--loaded .button--view {
