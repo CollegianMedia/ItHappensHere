@@ -96,7 +96,7 @@
 		// the fullscreen element/division that will slide up, giving the illusion the items will fall down
 		pagemover = mainContainer.querySelector('.page--mover'),
 		// the loading element shown while the images are loaded
-		loadingStatusEl = pagemover.querySelector('.la-square-loader'),
+		loadingStatusEl = pagemover.querySelector('.sk-cube-grid'),
 		// window sizes (width and height)
 		winsize = {width: window.innerWidth, height: window.innerHeight},
 		// translation values (x and y): percentages of the item´s width and height; scale value; rotation (z) value
