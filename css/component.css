@@ -176,7 +176,7 @@
 .button--view:hover,
 .button--view:focus {
 	outline: none;
-	fill: #03a9f4;
+	fill: #FFF;
 }
 
 .button--load {
